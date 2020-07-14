@@ -51,16 +51,22 @@ h2.section-title {
         text-align: center;
         font-size: 0.9em;
         font-weight: normal;
-        @include ab_center;
-        top: 85%;
+        position: absolute;
+        right: 15%;
+        bottom: -23%;
         opacity: 0;
+        z-index: 9;
         transition: 0.5s;
         &:after {
-            content: "V";
+            content: "";
             display: block;
-            color: $main-color01;
+            width: 1px;
+            height: 60px;
+            margin: auto;
+            background-color: $main-color01;
             transform: scaleX(1.5) scaleY(0.5);
-            padding-top: 10px;
+            padding-top: 8px;
+            font-size: 1.5rem;
         }
         &.opacity1 {
             opacity: 1;
@@ -79,22 +85,37 @@ h2.section-title {
         font-weight: bold;
         font-size: 5rem;
         color: #EBF5FB;
+        @media (max-width: 992px) {
+            top: 280px;
+        }
+        @media (max-width: 768px) {
+            top: 420px;
+            right: 10px;
+            font-size: 4rem;
+        }
     }
 }
 .thinker {
     .thinker-card-title {
         @include ab_center;
-        
         h2 {
             font-weight: 700;
             font-size: 3.8rem;
             background: linear-gradient(90deg, rgba(0,151,226,1) 0%, rgba(0,176,245,1) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-align: center;
+            @media (max-width: 992px) {
+                font-size: 2.8rem; 
+            }
         }
         h3 {
             font-size: 2.1rem;
             color: $main-color01;
+            text-align: center;
+            @media (max-width: 992px) {
+                font-size: 1.5rem; 
+            }
         }
     }
     .thinker-card {
@@ -107,6 +128,9 @@ h2.section-title {
             color: $main-color01-dark;
             line-height: 1.5;
             margin-bottom: 0;
+            @media (max-width: 992px) {
+                font-size: 1rem; 
+            }
         }
     }
 }
@@ -133,10 +157,17 @@ h2.section-title {
             border-radius: 50%;
             line-height: 2rem;
             vertical-align: middle;
+            margin-right: 1rem;
+            @media (min-width: 768px) and (max-width: 991.98px) {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+                margin-right: .5rem;
+            }
         }
         p {
             display: inline-block;
             vertical-align: middle;
+            width: calc(100% - 4.5rem);
             span {
                 font-size: 1.2rem;
                 font-weight: 700;
@@ -145,6 +176,22 @@ h2.section-title {
     }
 }
 .products {
+    h2 {
+        display: inline-block;
+    }
+    .products-more {
+        display: inline-block;
+        float: right;
+        margin-top: 2.8rem;
+        color: $main-color01;
+        &:hover {
+            color: darken($main-color01, 10%);
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
     .mask {
         position: absolute;
         top: 0;

@@ -43,23 +43,25 @@ h2.section-title span {
   font-size: 0.9em;
   font-weight: normal;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 85%;
+  right: 15%;
+  bottom: -23%;
   opacity: 0;
+  z-index: 9;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .about h6.scroll:after {
-  content: "V";
+  content: "";
   display: block;
-  color: #0096DA;
+  width: 1px;
+  height: 60px;
+  margin: auto;
+  background-color: #0096DA;
   -webkit-transform: scaleX(1.5) scaleY(0.5);
           transform: scaleX(1.5) scaleY(0.5);
-  padding-top: 10px;
+  padding-top: 8px;
+  font-size: 1.5rem;
 }
 
 .about h6.scroll.opacity1 {
@@ -83,6 +85,20 @@ h2.section-title span {
   color: #EBF5FB;
 }
 
+@media (max-width: 992px) {
+  .middle-section:before {
+    top: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .middle-section:before {
+    top: 420px;
+    right: 10px;
+    font-size: 4rem;
+  }
+}
+
 .thinker .thinker-card-title {
   position: absolute;
   left: 50%;
@@ -98,11 +114,25 @@ h2.section-title span {
   background: linear-gradient(90deg, #0097e2 0%, #00b0f5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .thinker .thinker-card-title h2 {
+    font-size: 2.8rem;
+  }
 }
 
 .thinker .thinker-card-title h3 {
   font-size: 2.1rem;
   color: #0096DA;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .thinker .thinker-card-title h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .thinker .thinker-card {
@@ -119,6 +149,12 @@ h2.section-title span {
   color: #0078AF;
   line-height: 1.5;
   margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .thinker .thinker-card h4 {
+    font-size: 1rem;
+  }
 }
 
 .service .customized {
@@ -145,16 +181,48 @@ h2.section-title span {
   border-radius: 50%;
   line-height: 2rem;
   vertical-align: middle;
+  margin-right: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .service .service-item i {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-right: .5rem;
+  }
 }
 
 .service .service-item p {
   display: inline-block;
   vertical-align: middle;
+  width: calc(100% - 4.5rem);
 }
 
 .service .service-item p span {
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+.products h2 {
+  display: inline-block;
+}
+
+.products .products-more {
+  display: inline-block;
+  float: right;
+  margin-top: 2.8rem;
+  color: #0096DA;
+}
+
+.products .products-more:hover {
+  color: #0073a7;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .products .products-more {
+    display: none;
+  }
 }
 
 .products .mask {
