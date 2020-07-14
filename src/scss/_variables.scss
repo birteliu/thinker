@@ -1,0 +1,154 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+//預設文字顏色
+$text-color: #333333;
+
+// ====== 客制範圍 SR ======
+// 主色系變數
+$main-color01: #18a78e;
+$main-color01-light: #f2fafd;
+$main-color01-dark: #07705b;
+
+$main-color02: #e2673b;
+$main-color03: #7ab749;
+$main-color04: #559cd8;
+$main-color05: #f2aa52;
+$main-color06: #666666; //預備色
+
+.main-color01 { color: $main-color01; }
+.main-color02 { color: $main-color02; }
+.main-color03 { color: $main-color03; }
+.main-color04 { color: $main-color04; }
+.main-color05 { color: $main-color05; }
+
+.bg-color01 { background-color: $main-color01; color: #fff; }
+.bg-color01-light { background-color :$main-color01-light; }
+
+.btn-color01 { 
+  color: #fff; 
+  background-color: $main-color01; 
+  border-color: $main-color01; 
+  &:hover {
+    color: #fff;
+    background-color: darken($main-color01, 5%);
+    border-color: darken($main-color01, 8%);
+  }
+}
+.btn-color01-dark { 
+  color: #fff; 
+  background-color: $main-color01-dark; 
+  border-color: $main-color01-dark; 
+  &:hover {
+    color: #fff;
+    background-color: darken($main-color01-dark, 5%);
+    border-color: darken($main-color01-dark, 8%);
+  }
+}
+
+// 客制變數
+$custom-box-shadow:-10px 10px 20px 0px rgba(30, 30, 30, 0.05);
+$custom-border-radius: 5px;
+// ====== 客制範圍 END ======
+
+// stylelint-disable
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+//可設定變數名稱後加入預設顏色變數，類似bg-main01 text-main01 btn-main-01
+$colors: map-merge(
+  (
+    "blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "main01": $main-color01,
+    "main02": $main-color02,
+    "main03": $main-color03,
+    "main04": $main-color04,
+    "main05": $main-color05,
+    "main06": $main-color06
+  ),
+  $colors
+);
+
+
+$primary: #17a2b8 !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+//可設定變數名稱後加入預設顏色變數
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "main01": $main-color01,
+    "main02": $main-color02,
+    "main03": $main-color03,
+    "main04": $main-color04,
+    "main05": $main-color05,
+    "main06": $main-color06
+  ),
+  $theme-colors
+);

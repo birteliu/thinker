@@ -1,0 +1,220 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %}
+    品種查詢-編輯
+{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+    {% import 'macros/nav.html' as nav %}
+    <!-- Set navitem to active -->
+    {{nav.active('index')}}
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="container-fluid py-3">
+    <h4 class="font-weight-bold d-inline-block">品種查詢-編輯</h4>
+    <a href="品種與技轉.html" class="link-color"><i class="las la-undo mx-1"></i>回查詢頁</a>
+    {% include "macros/breadcrumb.html" %}
+    <div class="row">
+        <div class="col-md-6 pr-md-0">
+            <div class="edit-area bg-color01-light p-1">
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">公開案號</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox1" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">申請案編號</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox2" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">申請登記品種名稱</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox3" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">申請日期</label>
+                    <div class="col-8 pl-1">
+                        <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                            <input class="w-100" id="datepicker1" value="10/10/2011" title="datepicker" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">公開日期</label>
+                    <div class="col-8 pl-1">
+                        <input class="w-100" id="datepicker2" value="10/10/2011" title="datepicker" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">權利狀態</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox4" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">權利期間</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox5" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">品種特性</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox6" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">申請人姓名或名稱</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox7" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">地址</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox8" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">電話</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox9" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">育種者姓名</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox10" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">住居所或營業所地址</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox11" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">植物種類</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox12" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">植物品種</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox13" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">植物品種中英文</label>
+                    <div class="col-8 pl-1">
+                        <input id="textbox14" class="w-100" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">是否公開</label>
+                    <div class="col-8 checkbox-radio">
+                        <input type="radio" name="engine" id="radio1" class="k-radio">
+                        <span class="mr-3 align-middle">公開</span>
+                        <input type="radio" name="engine" id="radio1" class="k-radio">
+                        <span class="align-middle">不公開</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-3 mt-md-0">
+            <form class="search-area pb-1">
+                <h6 class="px-3 py-2">L4 代碼</h6>
+                <div class="form-group px-3">
+                    <label for="">分類</label>
+                    <div class="form-row">
+                        <div class="col-4">
+                            <select id="dropdown1" class="w-100" placeholder="請選擇">
+                                <option>農</option>
+                                <option>漁</option>
+                                <option>畜產</option>
+                                <option>林產與特產品</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <select id="dropdown2" class="w-100" placeholder="請選擇">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <select id="dropdown3" class="w-100" placeholder="請選擇">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group px-3">
+                    <label for="">關鍵字</label>
+                    <div class="form-row">
+                        <div class="col-8">
+                            <input id="textbox15" class="w-100" />
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-color01-dark w-100"><i class="las la-search mr-1"></i>查詢</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group px-3">
+                    <div id="listboxselect" role="application">
+                        <div class="demo-section k-content">
+                            <label for="optional" id="seachresult">查詢結果</label>
+                            <label for="selected">選取項目</label>
+                            <select id="optional">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                            </select>
+                            <select id="selected"></select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="search-area pb-2">
+                <h6 class="px-3 py-2">案件圖片</h6>
+                <div class="px-3">
+                    <div class="w-100">
+                        <input name="files" id="files" type="file" aria-label="files" />
+                    </div>
+                    <div class="box">
+                        <div class="box-col" style="display:none;">
+                            <div id="fileTypes"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 text-center my-3">
+            <button type="button" class="btn btn-secondary px-4"><i class="las la-times-circle mr-2"></i>取消</button>
+            <button type="button" class="btn btn-color01 px-4"><i class="las la-save mr-2"></i>儲存</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- 單獨引用 js 放置處 -->
+{% block js %}
+<!-- <script></script> -->
+{% endblock %}

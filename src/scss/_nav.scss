@@ -1,0 +1,144 @@
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+        font-size: 1.2rem;
+        .side-logo {
+            width: 12rem;
+            margin: 0 auto 1.25rem auto;
+        }
+    }
+    .list-group {
+        width: 15rem;
+    }
+    @include media-breakpoint-up(md) {
+        margin-left: 0;
+    }
+    
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+    @include media-breakpoint-up(md) {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+    @include media-breakpoint-up(md) {
+        margin-left: -15rem;
+    }
+}
+
+.sidebar-heading button {
+    font-size: 1.1rem;
+    background-color: #fff;
+    border-radius: 0;
+    &:hover {
+        background-color: $gray-100;
+    }
+    &.btn-agriculture {
+        border: 1px solid $main-color03;
+        color: $main-color03;
+        &.active {
+            background-color: $main-color03;
+            color: #fff;
+        }
+    }
+    &.btn-fishery {
+        border: 1px solid $main-color04;
+        color: $main-color04;
+        &.active {
+            background-color: $main-color04;
+            color: #fff;
+        }
+    }
+    &.btn-livestock {
+        border: 1px solid $main-color05;
+        color: $main-color05;
+        &.active {
+            background-color: $main-color05;
+            color: #fff;
+        }
+    }
+    &.btn-promotion {
+        border: 1px solid $main-color01;
+        color: $main-color01;
+        &.active {
+            background-color: $main-color01;
+            color: #fff;
+        }
+    }
+}
+
+.menu-section {
+    width: 15rem;
+}
+
+.menu-group {
+    border-bottom: 1px solid $gray-300;    
+    background-color: #fff;
+    .dropdown-toggle {
+        &:hover {
+            background-color: darken($main-color01-light,10%);
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .dropdown-menu {
+        max-height: 75vh;
+        overflow-y: scroll;
+        margin-left: -1.5rem;
+        &::-webkit-scrollbar { //整體的scrollbar樣式
+            width: 10px;
+            height: 10px;
+            background-color: #f5f5f5;
+          }
+          &::-webkit-scrollbar-thumb { //bar的樣式
+            background-color: $gray-400;
+          }
+          &::-webkit-scrollbar-track { //軌道的樣式
+            background-color: #fff;
+          }
+        .dropdown-item {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            &.active, &:active {
+                background-color: $main-color01-dark;
+            }
+            
+        }
+        @include media-breakpoint-down(sm) {
+            margin-left: -7rem;
+        }
+    }
+    .dropdown-toggle {
+        padding: .75rem 1.5rem;
+    }
+    &.active {
+        background-color: $main-color01-dark;
+        &::before {
+            content: "";
+            left: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background-color: $main-color01;
+        }
+        .dropdown-toggle {
+            color: #fff;
+            &:hover {
+                background-color: darken($main-color01-dark, 5%);
+            }
+        }
+    }
+}

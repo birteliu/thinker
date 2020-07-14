@@ -1,0 +1,150 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %}
+    品種與技轉
+{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+    {% import 'macros/nav.html' as nav %}
+    <!-- Set navitem to active -->
+    {{nav.active('page01')}}
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="container-fluid py-3">
+    <h4 class="font-weight-bold d-inline-block">品種與技轉</h4>
+    {% include "macros/breadcrumb.html" %}
+    <form class="search-area p-3">
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-2">
+                <label for="">植物種類</label>
+                <div class="form-row">
+                    <div class="col-6">
+                        <input id="combo1" class="w-100" placeholder="請選擇"/>
+                    </div>
+                    <div class="col-6">
+                        <select id="combodropdown1" class="w-100" placeholder="請選擇" >
+                            <option>X-Small</option>
+                            <option>Small</option>
+                            <option>Medium</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-3 mb-2">
+                <label for="">關鍵字</label>
+                <input id="textbox1" class="w-100" />
+            </div>
+            <div class="form-group col-md-3 mb-2">
+                <label for="">是否公開</label>
+                <select id="dropdown1" class="w-100" placeholder="請選擇">
+                    <option>不拘</option>
+                    <option>公開</option>
+                    <option>非公開</option>
+                </select>
+            </div>
+        </div>
+        <hr class="mt-2">
+        <div class="text-right">
+            <button class="btn btn-color01-dark"><i class="las la-search mr-1"></i>查詢</button>
+            <button class="btn btn-secondary"><i class="las la-th-list mr-1"></i>列出全部</button>
+        </div>
+    </form>
+    <!-- 用 div 做的表格 -->
+    <div class="list-area p-3 mt-3 bg-color01-light">
+        <div class="mb-2">
+            <button class="btn btn-color01"><i class="las la-plus mr-1"></i>新增</button>
+            <button class="btn btn-danger"><i class="las la-trash-alt mr-1"></i>刪除</button>
+        </div>
+        <div class="table m-0">
+            <div class="row list-header">
+                <div class="cell"></div>
+                <div class="cell">申請登記品種名稱</div>
+                <div class="cell">植物種類</div>
+                <div class="cell">申請日期</div>
+                <div class="cell">公開日期</div>
+                <div class="cell">最後更新時間</div>
+            </div>
+            
+            <div class="row list-body">
+                <div class="cell" data-title="選取">
+                    <div class="custom-control custom-checkbox d-inline">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1"></label>
+                    </div>
+                </div>
+                <div class="cell" data-title="申請登記品種名稱"><a href="品種與技轉-編輯頁.html" class="link-color">桃園1號-玫瑰女孩</a></div>
+                <div class="cell" data-title="植物種類">日日春</div>
+                <div class="cell" data-title="申請日期">2010/10/22</div>
+                <div class="cell" data-title="公開日期">2010/11/02</div>
+                <div class="cell" data-title="最後更新時間"></div>
+            </div>
+            <div class="row list-body">
+                <div class="cell" data-title="選取">
+                    <div class="custom-control custom-checkbox d-inline">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1"></label>
+                    </div>
+                </div>
+                <div class="cell" data-title="申請登記品種名稱"><a href="#" class="link-color">桃園2號-桃花女</a></div>
+                <div class="cell" data-title="植物種類">日日春</div>
+                <div class="cell" data-title="申請日期">王大明</div>
+                <div class="cell" data-title="公開日期">農糧署</div>
+                <div class="cell" data-title="最後更新時間"></div>
+            </div>
+        </div>
+        {% include "macros/pagination.html" %}
+    </div>
+    <!-- 用 table 做的表格 -->
+    <div class="list-area p-3 mt-3 bg-color01-light">
+        <table class="table m-0">              
+            <thead>              
+                <tr class="row list-header">              
+                    <th class="cell"></th>              
+                    <th class="cell">申請登記品種名稱</th>              
+                    <th class="cell">植物種類</th>              
+                    <th class="cell">申請日期</th>               
+                    <th class="cell">公開日期</th>              
+                    <th class="cell">最後更新時間</th>            
+                </tr>              
+            </thead>              
+            <tbody>              
+                <tr class="row list-body">  
+                    <th class="cell" data-title="選取">
+                        <div class="custom-control custom-checkbox d-inline">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1"></label>
+                        </div>
+                    </th>            
+                    <th class="cell" data-title="申請登記品種名稱"><a href="#" class="link-color">桃園2號-桃花女</a></th>              
+                    <td class="cell" data-title="植物種類">日日春</td>              
+                    <td class="cell" data-title="申請日期">王大明</td>              
+                    <td class="cell" data-title="公開日期">農糧署</td>                          
+                    <td class="cell" data-title="最後更新時間"></td>              
+                </tr>               
+                <tr class="row list-body">              
+                    <th class="cell" data-title="選取">
+                        <div class="custom-control custom-checkbox d-inline">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1"></label>
+                        </div>
+                    </th>            
+                    <th class="cell" data-title="申請登記品種名稱"><a href="#" class="link-color">桃園2號-桃花女</a></th>              
+                    <td class="cell" data-title="植物種類">日日春</td>              
+                    <td class="cell" data-title="申請日期">王大明</td>              
+                    <td class="cell" data-title="公開日期">農糧署</td>                          
+                    <td class="cell" data-title="最後更新時間"></td>         
+                </tr>                
+            </tbody>              
+        </table>
+        {% include "macros/pagination.html" %}
+    </div>
+</div>
+{% endblock %}
+
+<!-- 單獨引用 js 放置處 -->
+{% block js %}
+<!-- <script></script> -->
+{% endblock %}

@@ -1,0 +1,88 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %}
+    訂閱統計
+{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+    {% import 'macros/nav.html' as nav %}
+    <!-- Set navitem to active -->
+    {{nav.active('page03')}}
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="container-fluid py-3">
+    <h4 class="font-weight-bold d-inline-block">訂閱統計</h4>
+    {% include "macros/breadcrumb.html" %}
+    <ul class="nav nav-pills mb-1" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">一般訂閱</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">交易行情</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">訂閱單元彙整</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <form class="search-area p-3">
+                <div class="form-row">
+                    <div class="form-group col-md-3 mb-2">
+                        <label for="">手機號碼</label>
+                        <input id="textbox1" class="w-100" />
+                    </div>
+                    <div class="form-group col-md-6 mb-2">
+                        <label for="">身分別</label>
+                        <div class="form-row">
+                            <div class="col-6">
+                                <input id="combo1" class="w-100" placeholder="請選擇"/>
+                            </div>
+                            <div class="col-6">
+                                <select id="combodropdown1" class="w-100" placeholder="請選擇" >
+                                    <option>X-Small</option>
+                                    <option>Small</option>
+                                    <option>Medium</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3 mb-2">
+                        <label for="">訂閱單元</label>
+                        <select id="dropdown1" class="w-100" placeholder="請選擇">
+                            <option>不拘</option>
+                            <option>公開</option>
+                            <option>非公開</option>
+                        </select>
+                    </div>
+                </div>
+                <hr class="mt-2">
+                <div class="text-right">
+                    <button class="btn btn-color01-dark"><i class="las la-search mr-1"></i>查詢</button>
+                    <button class="btn btn-secondary"><i class="las la-th-list mr-1"></i>列出全部</button>
+                    <div class="dropdown d-inline-block">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- 單獨引用 js 放置處 -->
+{% block js %}
+<!-- <script></script> -->
+{% endblock %}

@@ -1,0 +1,25 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %}
+    首頁
+{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+    {% import 'macros/nav.html' as nav %}
+    <!-- Set navitem to active -->
+    {{nav.active('index')}}
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="container-fluid py-3">
+    <h5 class="font-weight-bold d-inline-block">標題</h5>
+    {% include "macros/breadcrumb.html" %}
+</div>
+{% endblock %}
+
+<!-- 單獨引用 js 放置處 -->
+{% block js %}
+<!-- <script></script> -->
+{% endblock %}

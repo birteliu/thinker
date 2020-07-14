@@ -1,0 +1,71 @@
+<!-- 共用模版 -->
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}｜田邊好幫手後台維護系統</title>
+    <!-- 主視覺 css -->
+    <link href="css/kendo.common.min.css" rel="stylesheet" /> 
+    <link href="css/kendo.default.min.css" rel="stylesheet" />
+    <link href="css/kendo.default.mobile.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body cz-shortcut-listen="true"> 
+    <div class="d-flex" id="wrapper">
+        <!-- 選單 -->
+        {% block navigation %}{% endblock %}
+        <main role="main" id="page-content-wrapper">
+            <header class="top-header shadow-sm px-3 pt-2 pb-1">
+                <div class="row">
+                    <div class="col-lg-4 col-md-auto col-2 pr-0">
+                        <button class="btn btn-menu-toggle px-0" id="menu-toggle"><i class="las la-bars"></i></button>
+                        <img src="images/od_logo.png" alt="" class="img-fluid logo d-none d-md-inline-block">
+                    </div>
+                    <div class="col-lg-4 col-md-3 d-none d-lg-block">
+                        <div class="form-row">
+                            <div class="col-6 pr-0">
+                                <input class="form-control" type="text" placeholder="搜尋" aria-label="Search">
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-color01" type="submit"><i class="las la-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-right pl-0">
+                        <div class="row float-right">
+                            <div class="col-auto px-1 login-person">
+                                <span class="small">王小明 您好<br>12 分 11 秒後將登出</span>
+                            </div>
+                            <div class="col-auto pl-1">
+                                <a class="btn btn-color01 mr-1" href="#">延長時間</a>
+                                <a class="btn btn-outline-secondary" href="#">登出</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- 內容切換 -->
+            <div class="main-content">
+                {% block content %}{% endblock %}
+            </div>
+            <footer class="footer mt-auto p-3 bg-light border">
+                <span class="d-block text-center text-muted small">行政院農委會版權所有<br>Copyright © 2008-2020 All Right Reserved</span>
+            </footer>
+        </main>
+    </div>
+
+    <!-- js 載入 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    <!-- 各分頁引用js -->
+    {% block js %} {% endblock %}
+
+    <!-- 我的 js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

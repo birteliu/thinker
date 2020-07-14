@@ -1,0 +1,160 @@
+{% macro active(activePage='home') %}
+<div class="bg-color01-light shadow" id="sidebar-wrapper">
+  <div class="sidebar-heading text-center">
+    <div class="side-logo d-block d-md-none">
+      <img src="images/od_logo.png" alt="" class="img-fluid">
+    </div>
+    <button class="btn btn-agriculture active">農</button>
+    <button class="btn btn-fishery">漁</button>
+    <button class="btn btn-livestock">畜</button>
+    <button class="btn btn-promotion">民</button>
+  </div>
+  <div class="menu-section">
+    <div class="menu-group dropright {%if activePage == 'page01' %} active {% endif %} {%if activePage == 'page02' %} active {% endif %}">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        資料維護
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">資料維護</span>
+        <a class="dropdown-item" href="#">農業法規</a>
+        <a class="dropdown-item" href="#">農業技術資訊</a>
+        <a class="dropdown-item" href="#">常見問題維護</a>
+        <a class="dropdown-item" href="#">農業機械廠商</a>
+        <a class="dropdown-item" href="#">有機農業資材</a>
+        <a class="dropdown-item" href="#">農藥查詢</a>
+        <a class="dropdown-item" href="#">植物保護資訊</a>
+        <a class="dropdown-item {%if activePage == 'page02' %} active {% endif %}" href="外部資料維護.html">外部資料維護</a>
+        <a class="dropdown-item {%if activePage == 'page01' %} active {% endif %}" href="品種與技轉.html">品種與技轉</a>
+        <a class="dropdown-item" href="#">TGAP下載</a>
+        <a class="dropdown-item" href="#">前台進階搜尋項目選擇單維護</a>
+        <a class="dropdown-item" href="#">土壤及作物營養障礙圖鑑查詢</a>
+        <a class="dropdown-item" href="#">各種元素對作物之作用</a>
+        <a class="dropdown-item" href="#">施肥推薦量及施用方法</a>
+        <a class="dropdown-item" href="#">禁用農藥</a>
+        <a class="dropdown-item" href="#">限用農藥</a>
+        <a class="dropdown-item" href="#">合理化施肥</a>
+        <a class="dropdown-item" href="#">各種元素對作物之作用</a>
+        <a class="dropdown-item" href="#">作物農藥延伸使用範圍</a>
+        <a class="dropdown-item" href="#">農業期刊</a>
+        <a class="dropdown-item" href="#">有機質肥料品牌推薦</a>
+        <a class="dropdown-item" href="#">TGAP作業本月提醒事項</a>
+        <a class="dropdown-item" href="#">中央氣象局-每日氣象資料維護</a>
+        <a class="dropdown-item" href="#">肥料登記證</a>
+        <a class="dropdown-item" href="#">分級包裝</a>
+        <a class="dropdown-item" href="#">農民學院</a>
+        <a class="dropdown-item" href="#">農情調查</a>
+        <a class="dropdown-item" href="#">農機代耕資訊</a>
+        <a class="dropdown-item" href="#">蔬果害蟲分布資訊</a>
+        <a class="dropdown-item" href="#">農情調查(稻米)</a>
+        <a class="dropdown-item" href="#">農產品檢驗資訊</a>
+        <a class="dropdown-item" href="#">農機性能測定報告</a>
+        <a class="dropdown-item" href="#">國產合格禽肉哪裡買</a>
+        <a class="dropdown-item" href="#">青農創業貸款</a>
+        <a class="dropdown-item" href="#">園食材資料維護</a>
+      </div>
+    </div>
+
+    <div class="menu-group dropright">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        版面維護
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">版面維護</span>
+        <a class="dropdown-item" href="#">前台項目選擇單維護</a>
+        <a class="dropdown-item" href="#">儀表板版型管理</a>
+        <a class="dropdown-item" href="#">網站地圖維護</a>
+        <a class="dropdown-item" href="#">關於本站維護</a>
+        <a class="dropdown-item" href="#">線上教學維護</a>
+        <a class="dropdown-item" href="#">服務介紹維護</a>
+      </div>
+    </div>
+
+    <div class="menu-group dropright">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        功能維護
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">功能維護</span>
+        <a class="dropdown-item" href="#">相關連結與廣告維護</a>
+      </div>
+    </div>
+
+    <div class="menu-group dropright">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        多元發布資料維護
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">多元發布資料維護</span>
+        <a class="dropdown-item" href="#">自訂訊息</a>
+        <a class="dropdown-item" href="#">重大農業消息</a>
+        <a class="dropdown-item" href="#">農漁民子女獎助學金</a>
+        <a class="dropdown-item" href="#">政策性農貸</a>
+        <a class="dropdown-item" href="#">災害補助</a>
+        <a class="dropdown-item" href="#">農作物生產預測</a>
+        <a class="dropdown-item" href="#">植物疫情</a>
+      </div>
+    </div>
+
+    <div class="menu-group dropright">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        訊息發布管理
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">訊息發布管理</span>
+        <a class="dropdown-item" href="#">訊息發布作業</a>
+        <a class="dropdown-item" href="#">歷史發布資料</a>
+        <a class="dropdown-item" href="#">語音檔上傳</a>
+      </div>
+    </div>
+
+    <div class="menu-group dropright">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        資料管理與查詢
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">資料管理與查詢</span>
+        <a class="dropdown-item" href="#">會員管理</a>
+        <a class="dropdown-item" href="#">會員進階查詢</a>
+        <a class="dropdown-item" href="#">可接受清單管理</a>
+      </div>
+    </div>
+
+    <div class="menu-group dropright">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        其它
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">其它</span>
+        <a class="dropdown-item" href="#">前台錯誤回報維護</a>
+        <a class="dropdown-item" href="#">茶農PDA上傳紀錄</a>
+        <a class="dropdown-item" href="#">農民農業專業訓練簡訊紀錄</a>
+      </div>
+    </div>
+
+    <div class="menu-group dropright">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        後台代碼維護
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">後台代碼維護</span>
+        <a class="dropdown-item" href="#">雙向簡訊代碼維護</a>
+        <a class="dropdown-item" href="#">縣市維護</a>
+        <a class="dropdown-item" href="#">作物代碼維護</a>
+        <a class="dropdown-item" href="#">作物儀表板選單管理</a>
+        <a class="dropdown-item" href="#">生活版介接分類代碼</a>
+        <a class="dropdown-item" href="#">機關檔維護</a>
+      </div>
+    </div>
+
+    <div class="menu-group dropright">
+      <button type="button" class="btn rounded-0 w-100 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Android 手機資料維護
+      </button>
+      <div class="dropdown-menu shadow">
+        <span class="d-block px-4 pb-2 font-weight-bold border-bottom">手機資料維護</span>
+        <a class="dropdown-item" href="#">手機版重大訊息</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
