@@ -22,8 +22,18 @@ header {
     nav {
         background-color: #fff;
     }
+    a.navbar-brand {
+        cursor: pointer;
+    }
     a.nav-link {
         color: $text-color!important;
+        border-bottom: 2px solid #fff;
+        &:hover {
+            color: $main-color01-dark!important;
+            transition: .3s;
+            cursor: pointer;
+            border-bottom: 2px solid $main-color01;
+        }
     }
 }
 h2.section-title {
