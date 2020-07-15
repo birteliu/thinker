@@ -7,13 +7,49 @@ header nav {
   background-color: #fff;
 }
 
+@media (max-width: 992px) {
+  header nav.navbar {
+    padding: 0;
+  }
+}
+
 header a.navbar-brand {
   cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  header a.navbar-brand {
+    padding: .5rem 1rem;
+  }
+}
+
+header .navbar-toggler {
+  outline: none;
+  color: #0078AF;
+}
+
+@media (max-width: 992px) {
+  header .navbar-toggler {
+    padding: .5rem 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  header .navbar-nav {
+    text-align: right;
+  }
 }
 
 header a.nav-link {
   color: #333333 !important;
   border-bottom: 2px solid #fff;
+  padding: 0.5rem 1rem !important;
+}
+
+@media (max-width: 992px) {
+  header a.nav-link {
+    background-color: #EEF8FF;
+  }
 }
 
 header a.nav-link:hover {
@@ -106,7 +142,7 @@ h2.section-title span {
 
 @media (max-width: 768px) {
   .middle-section:before {
-    top: 420px;
+    top: 380px;
     right: 10px;
     font-size: 4rem;
   }
@@ -136,6 +172,12 @@ h2.section-title span {
   }
 }
 
+@media (max-width: 576px) {
+  .thinker .thinker-card-title h2 {
+    font-size: 2.4rem;
+  }
+}
+
 .thinker .thinker-card-title h3 {
   font-size: 2.1rem;
   color: #0096DA;
@@ -145,6 +187,12 @@ h2.section-title span {
 @media (max-width: 992px) {
   .thinker .thinker-card-title h3 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .thinker .thinker-card-title h3 {
+    font-size: 1.3rem;
   }
 }
 
@@ -193,7 +241,7 @@ h2.section-title span {
   padding: .5rem;
   border-radius: 50%;
   line-height: 2rem;
-  vertical-align: middle;
+  vertical-align: top;
   margin-right: 1rem;
 }
 
@@ -222,20 +270,14 @@ h2.section-title span {
 
 .products .products-more {
   display: inline-block;
-  float: right;
-  margin-top: 2.8rem;
   color: #0096DA;
 }
 
 .products .products-more:hover {
   color: #0073a7;
   text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .products .products-more {
-    display: none;
-  }
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .products .mask {
@@ -248,8 +290,8 @@ h2.section-title span {
   height: 100%;
   overflow: hidden;
   background-attachment: fixed;
-  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #f2f7fd), color-stop(90%, rgba(255, 255, 255, 0)), to(#eeeeee));
-  background: linear-gradient(270deg, #f2f7fd 50%, rgba(255, 255, 255, 0) 90%, #eeeeee 100%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(40%, #f2f7fd), color-stop(100%, rgba(255, 255, 255, 0)), to(#eeeeee));
+  background: linear-gradient(270deg, #f2f7fd 40%, rgba(255, 255, 255, 0) 100%, #eeeeee 100%);
 }
 
 @media (max-width: 768px) {
@@ -259,9 +301,19 @@ h2.section-title span {
   }
 }
 
+.products .carousel {
+  border: 1px solid #daf3ff;
+}
+
+.products .view {
+  max-height: 80vh;
+}
+
 .products .carousel-content {
   position: absolute;
-  top: 40%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 50%;
   z-index: 10;
   padding: 0 6rem;
@@ -269,9 +321,11 @@ h2.section-title span {
 
 @media (max-width: 768px) {
   .products .carousel-content {
-    right: 15%;
-    left: 15%;
-    top: 15%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     padding: 0;
     text-align: center;
   }

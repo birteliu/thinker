@@ -21,18 +21,43 @@ body {
 header {
     nav {
         background-color: #fff;
+        &.navbar {
+            @media (max-width: 992px) {
+                padding: 0;
+            }
+        }
     }
     a.navbar-brand {
         cursor: pointer;
+        @media (max-width: 992px) {
+            padding: .5rem 1rem;
+        }
+    }
+    .navbar-toggler {
+        outline: none;
+        color: $main-color01-dark;
+        @media (max-width: 992px) {
+            padding: .5rem 1rem;
+        }
+    }
+    .navbar-nav {
+        @media (max-width: 992px) {
+            text-align: right;
+        }
     }
     a.nav-link {
         color: $text-color!important;
         border-bottom: 2px solid #fff;
+        padding: .5rem 1rem!important;
+        @media (max-width: 992px) {
+            background-color: $main-color01-light;
+        }
         &:hover {
             color: $main-color01-dark!important;
             transition: .3s;
             cursor: pointer;
             border-bottom: 2px solid $main-color01;
+            
         }
     }
 }
@@ -99,7 +124,7 @@ h2.section-title {
             top: 280px;
         }
         @media (max-width: 768px) {
-            top: 420px;
+            top: 380px;
             right: 10px;
             font-size: 4rem;
         }
@@ -118,6 +143,9 @@ h2.section-title {
             @media (max-width: 992px) {
                 font-size: 2.8rem; 
             }
+            @media (max-width: 576px) {
+                font-size: 2.4rem; 
+            }
         }
         h3 {
             font-size: 2.1rem;
@@ -125,6 +153,9 @@ h2.section-title {
             text-align: center;
             @media (max-width: 992px) {
                 font-size: 1.5rem; 
+            }
+            @media (max-width: 576px) {
+                font-size: 1.3rem; 
             }
         }
     }
@@ -166,7 +197,7 @@ h2.section-title {
             padding: .5rem;
             border-radius: 50%;
             line-height: 2rem;
-            vertical-align: middle;
+            vertical-align: top;
             margin-right: 1rem;
             @media (min-width: 768px) and (max-width: 991.98px) {
                 font-size: 1.5rem;
@@ -191,15 +222,11 @@ h2.section-title {
     }
     .products-more {
         display: inline-block;
-        float: right;
-        margin-top: 2.8rem;
         color: $main-color01;
         &:hover {
             color: darken($main-color01, 10%);
             text-decoration: none;
-        }
-        @media (max-width: 768px) {
-            display: none;
+            transition: .3s;
         }
     }
     .mask {
@@ -212,21 +239,26 @@ h2.section-title {
         height: 100%;
         overflow: hidden;
         background-attachment: fixed;
-        background:linear-gradient(270deg,rgba(242,247,253,1) 50%,rgba(255,255,255,0) 90%,rgba(238,238,238,1) 100%);
+        background:linear-gradient(270deg,rgba(242,247,253,1) 40%,rgba(255,255,255,0) 100%,rgba(238,238,238,1) 100%);
         @media (max-width: 768px) {
             background:linear-gradient(360deg,rgba(238,248,255,1) 50%,rgba(255,255,255,0) 100%);
         }
     }
+    .carousel {
+        border: 1px solid lighten($main-color01, 50%);
+    }
+    .view {
+        max-height: 80vh;
+    }
     .carousel-content {
         position: absolute;
-        top: 40%;
+        top: 50%;
+        transform: translateY(-50%);
         left: 50%;
         z-index: 10;
         padding: 0 6rem;
         @media (max-width: 768px) {
-            right: 15%;
-            left: 15%;
-            top: 15%;
+            @include ab_center;
             padding: 0;
             text-align: center;
         }

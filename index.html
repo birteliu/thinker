@@ -18,16 +18,16 @@
         <a class="navbar-brand" id="menu-logo">
           <img src="images/logo.png" width="150" alt="" loading="lazy">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#main_nav"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main_nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link px-3" id="menu-about">關於新客</a></li>
-            <li class="nav-item"><a class="nav-link px-3" id="menu-service">服務項目</a></li>
-            <li class="nav-item"><a class="nav-link px-3" id="menu-products">精選案例</a></li>
-            <li class="nav-item"><a class="nav-link px-3" id="menu-contact">聯絡我們</a></li>
+            <li class="nav-item"><a class="nav-link" id="menu-about">關於新客</a></li>
+            <li class="nav-item"><a class="nav-link" id="menu-service">服務項目</a></li>
+            <li class="nav-item"><a class="nav-link" id="menu-products">精選案例</a></li>
+            <li class="nav-item"><a class="nav-link" id="menu-contact">聯絡我們</a></li>
           </ul>
         </div> <!-- navbar-collapse.// -->
       </div> <!-- container.// -->
@@ -49,38 +49,38 @@
   <section class="middle-section py-5">
     <div class="thinker container">
       <div class="row">
-        <div class="col-md-4 col-6">
+        <div class="col-md-4 col-6 pr-1 pr-md-3">
           <div class="thinker-card-title text-nowrap">
             <h2>新客資訊</h2>
             <h3>We Are Thinker</h3>
           </div>
         </div>
-        <div class="col-md-4 col-6">
-          <div class="thinker-card p-4">
+        <div class="col-md-4 col-6 pl-2 pl-md-3">
+          <div class="thinker-card p-3 p-md-4">
             <h6>我們的定位</h6>
             <h4>網際網路<br>應用服務提供商</h4>
           </div>
         </div>
-        <div class="col-md-4 col-6 mt-4 mt-md-0">
-          <div class="thinker-card p-4">
+        <div class="col-md-4 col-6 mt-4 mt-md-0 pr-2 pr-md-3">
+          <div class="thinker-card p-3 p-md-4">
             <h6>擅長的領域</h6>
             <h4>WEB 應用<br>系統開發</h4>
           </div>
         </div>
-        <div class="col-md-4 col-6 mt-4">
-          <div class="thinker-card p-4">
+        <div class="col-md-4 col-6 mt-4 pl-2 pl-md-3">
+          <div class="thinker-card p-3 p-md-4">
             <h6>公司宗旨</h6>
             <h4>永遠比客戶<br>多想一步</h4>
           </div>
         </div>
-        <div class="col-md-4 col-6 mt-4">
-          <div class="thinker-card p-4">
+        <div class="col-md-4 col-6 mt-4 pr-2 pr-md-3">
+          <div class="thinker-card p-3 p-md-4">
             <h6>合作的對象</h6>
             <h4>政府機關<br>大專院校</h4>
           </div>
         </div>
-        <div class="col-md-4 col-6 mt-4">
-          <div class="thinker-card p-4">
+        <div class="col-md-4 col-6 mt-4 pl-2 pl-md-3">
+          <div class="thinker-card p-3 p-md-4">
             <h6>導入過的系統</h6>
             <h4>選課、填報系統<br>無障礙、影音平台</h4>
           </div>
@@ -93,8 +93,8 @@
       </h2>
       <div class="container mt-4">
         <div class="row">
-          <div class="col-md-6 p-5 customized">
-            <h4>客製化</h4>
+          <div class="col-md-6 p-3 p-md-5 customized">
+            <h4 class="text-center text-md-left">客製化</h4>
             <div class="service-item p-3">
               <i class="las la-trophy"></i>
               <p class="mb-0">
@@ -132,8 +132,8 @@
               </p>
             </div>
           </div>
-          <div class="col-md-6 p-5 module">
-            <h4>產品模組</h4>
+          <div class="col-md-6 p-3 p-md-5 module">
+            <h4 class="text-center text-md-left">產品模組</h4>
             <div class="service-item p-3">
               <i class="las la-trophy"></i>
               <p class="mb-0">
@@ -179,7 +179,7 @@
   <section class="products" id="products-section">
     <div class="container">
       <h2 class="section-title my-3">案例精選<span class="pl-3">PRODUCTS</span></h2>
-      <a href="#" class="products-more">了解更多案例<i class="las la-angle-right"></i></a>
+      <a href="#" class="products-more d-none d-md-inline-block float-right mt-5">了解更多案例<i class="las la-angle-right"></i></a>
     </div>
     <div class="container-fluid px-0">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -221,6 +221,7 @@
         </a>
       </div>
     </div>
+    <a href="#" class="products-more d-block d-md-none text-center mt-3">了解更多案例<i class="las la-angle-right"></i></a>
   </section>
   <section class="contact container my-5" id="contact-section">
     <div class="row">
@@ -234,7 +235,7 @@
           <li><i class="las la-phone-volume"></i>08-12345678 週一至週五 9:30 - 6:30</li>
           <li><i class="las la-map-marked"></i>105609 臺北市松山區南京東路4段1號2樓</li>
         </ul>
-        <a href="#" class="btn rounded-pill mb-2">填寫連絡表單</a>
+        <a href="#" class="btn rounded-pill mb-2 py-2">填寫連絡表單<i class="las la-hand-pointer ml-2"></i></a>
         <div class="text-center text-muted">留下您的資訊，我們收到後將盡快與您聯繫</div>
       </div>
       <div class="col-md-6 mt-3 mt-md-0 py-4">
