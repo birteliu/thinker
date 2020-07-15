@@ -13,11 +13,14 @@ $main-color01: #0096DA;
 $main-color01-light: #EEF8FF;
 $main-color01-dark: #0078AF;
 $text-color: #333333;
+$main-color02: #e2673b;
 
 // 共用
 body {
     font-family: "Noto Sans TC", sans-serif;
 }
+
+//選單
 header {
     nav {
         background-color: #fff;
@@ -61,6 +64,8 @@ header {
         }
     }
 }
+
+//index.html
 h2.section-title {
     font-size: 3rem;
     font-weight: 700;
@@ -80,6 +85,9 @@ h2.section-title {
     }
     p {
         line-height: 1.8;
+        @media (min-width: 1500px) { 
+            width: 80%;
+        }
     }
     h6.scroll {
         color: $main-color01;
@@ -92,6 +100,9 @@ h2.section-title {
         opacity: 0;
         z-index: 9;
         transition: 0.5s;
+        @media (min-width: 1500px) { 
+            bottom: -18%;        
+        }
         &:after {
             content: "";
             display: block;
@@ -219,6 +230,9 @@ h2.section-title {
 .products {
     h2 {
         display: inline-block;
+        @media (max-width: 576px) {
+            line-height: .9;
+        }
     }
     .products-more {
         display: inline-block;
@@ -249,6 +263,9 @@ h2.section-title {
     }
     .view {
         max-height: 80vh;
+        @media (min-width: 1200px) {
+            max-height: 60vh;
+        }
     }
     .carousel-content {
         position: absolute;
@@ -257,6 +274,9 @@ h2.section-title {
         left: 50%;
         z-index: 10;
         padding: 0 6rem;
+        @media (min-width: 1500px) { 
+            padding-right: 20rem;
+        }
         @media (max-width: 768px) {
             @include ab_center;
             padding: 0;
@@ -290,47 +310,100 @@ h2.section-title {
     }
     .carousel-control-prev, .carousel-control-next {
         color: $main-color01;
+        z-index: 11;
     }
 }
 .contact {
     line-height: 1.5;
     img {
         width: 200px;
+        @media (max-width: 576px) {
+            width: 160px;
+        }
     }
     h4 {
       font-weight: bold;
       vertical-align: middle;
       font-size: 1.8rem;
       padding-top: .25rem;
+      @media (max-width: 576px) {
+        font-size: 1.4rem;
+      }
       span {
           font-weight: 400;
           font-size: 1rem;
           padding-top: .25rem;
       }  
     }
-    ul {
-        list-style-type: none;
-        line-height: 2;
-        i {
-            font-size: 1.2rem;
-            margin-right: .75rem;
-            text-align: center;
-            color: $main-color01;
-            vertical-align: middle;
-        }
-    }
     a {
         background-color: $main-color01;
         display: block;
         color: #fff;
+        @media (min-width: 1200px) { 
+            width: 90%;
+        }
         &:hover {
             background-color: darken($main-color01, 10%);
             color: #fff;
         }
     }
 }
+ul.contact-info {
+    list-style-type: none;
+    line-height: 2;
+    i {
+        font-size: 1.2rem;
+        margin-right: .75rem;
+        text-align: center;
+        color: $main-color01;
+        vertical-align: middle;
+    }
+}
 footer {
     color: #fff;
     text-align: center;
     background:linear-gradient(90deg,rgba(0,152,227,1) 0%,rgba(127,214,251,1) 100%);
+}
+
+//contact.html
+.contact-page {
+    .contact-logo {
+        cursor: pointer;
+        display: block;
+        img {
+            width: 200px;
+        }
+    }
+    h4 {
+        line-height: 1.5;
+    }
+    form {
+        line-height: 1;
+        .form-label {
+            border-left: 4px solid $main-color01;
+            padding-left: .5rem;
+            margin-top: .75rem;
+            span {
+                color: $main-color02;
+                padding-left: .25rem;
+            }
+        }
+        .custom-radio {
+            line-height: 1.5;
+            margin-bottom: .25rem;
+        }
+        button {
+            background-color: $main-color01;
+            color: #fff;
+            padding: .5rem 5rem;
+            margin: auto;
+            display: block;
+        }
+    }
+}
+.contact-footer {
+    @media (min-width: 1500px) { 
+        position: absolute;
+        bottom: 0;
+    }
 }
