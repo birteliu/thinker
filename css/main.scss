@@ -385,12 +385,19 @@ footer {
     .contact-logo {
         cursor: pointer;
         display: block;
+        @media (max-width: 576px) {
+            text-align: center;
+        }
         img {
             width: 200px;
         }
     }
     h4 {
         line-height: 1.5;
+        @media (max-width: 576px) {
+            font-size: 1.4rem;
+            text-align: center;
+        }
     }
     form {
         line-height: 1;

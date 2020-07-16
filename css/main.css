@@ -506,12 +506,25 @@ footer {
   display: block;
 }
 
+@media (max-width: 576px) {
+  .contact-page .contact-logo {
+    text-align: center;
+  }
+}
+
 .contact-page .contact-logo img {
   width: 200px;
 }
 
 .contact-page h4 {
   line-height: 1.5;
+}
+
+@media (max-width: 576px) {
+  .contact-page h4 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
 }
 
 .contact-page form {
