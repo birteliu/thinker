@@ -104,6 +104,14 @@ h2.section-title span {
   z-index: 9;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-animation-name: scrolldown;
+          animation-name: scrolldown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @media (min-width: 1500px) {
@@ -127,6 +135,30 @@ h2.section-title span {
 
 .about h6.scroll.opacity1 {
   opacity: 1;
+}
+
+@-webkit-keyframes scrolldown {
+  0% {
+    bottom: -18%;
+  }
+  50% {
+    bottom: -23%;
+  }
+  100% {
+    bottom: -18%;
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    bottom: -18%;
+  }
+  50% {
+    bottom: -23%;
+  }
+  100% {
+    bottom: -18%;
+  }
 }
 
 .middle-section {
@@ -500,6 +532,15 @@ footer {
 .contact-page form .custom-radio {
   line-height: 1.5;
   margin-bottom: .25rem;
+}
+
+.contact-page form .custom-radio .input-inline {
+  display: inline-block;
+  width: auto;
+  border: none;
+  border-bottom: 2px solid #ced4da;
+  padding: .25rem 0.25rem;
+  outline: none;
 }
 
 .contact-page form button {

@@ -50,3 +50,8 @@ if (
         }
     })
 );
+
+//aos.js
+AOS.init({
+    easing: 'ease-in-out-sine'
+});

@@ -100,6 +100,10 @@ h2.section-title {
         opacity: 0;
         z-index: 9;
         transition: 0.5s;
+        animation-name:scrolldown;
+        animation-duration:2s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
         @media (min-width: 1500px) { 
             bottom: -18%;        
         }
@@ -117,6 +121,17 @@ h2.section-title {
         &.opacity1 {
             opacity: 1;
         }
+    }
+}
+@keyframes scrolldown{
+    0%{
+        bottom:-18%;
+    }
+    50%{
+        bottom:-23%;
+    }
+    100%{
+        bottom:-18%;
     }
 }
 .middle-section {
@@ -391,6 +406,14 @@ footer {
         .custom-radio {
             line-height: 1.5;
             margin-bottom: .25rem;
+            .input-inline {
+                display: inline-block;
+                width: auto;
+                border: none;
+                border-bottom: 2px solid #ced4da;
+                padding: .25rem 0.25rem;
+                outline: none;
+            }
         }
         button {
             background-color: $main-color01;
