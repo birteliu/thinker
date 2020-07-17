@@ -14,6 +14,7 @@ $main-color01-light: #EEF8FF;
 $main-color01-dark: #0078AF;
 $text-color: #333333;
 $main-color02: #e2673b;
+$main-color03: #FFAA1C;
 
 // 共用
 body {
@@ -435,5 +436,53 @@ footer {
     @media (min-width: 1500px) { 
         position: absolute;
         bottom: 0;
+    }
+}
+
+//products.html
+.fixed-bg {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;  
+    color: #fff;
+    text-shadow: 1px 1px o rgba( 0, 0, 0, 0.35);
+    .top-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.6;
+        background: #1b242b;
+        background: linear-gradient(180deg,rgba(0,199,238,0.25) 0%,rgba(0,0,0,0.51) 100%);
+    }
+    h3 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
+.products-card {
+    background:linear-gradient(180deg,rgba(234,244,250,1) 0%,rgba(255,255,255,1) 100%);
+    border: 1px solid $main-color01;
+    box-shadow:0px 15px 30px -10px rgba(0,0,0,0.1); 
+    border-radius:10px;
+    border:1px solid rgba(238,248,255,1);
+    line-height: 1.5;
+    h4 {
+        line-height: 1.5;
+        font-weight: bold;
+    }
+    a {
+        background-color: $main-color03;
+        color: #fff;
+        line-height: 1.5;
+        &:hover {
+            color: #fff;
+            background-color: darken($main-color03, 6%);
+        }
     }
 }

@@ -570,4 +570,59 @@ footer {
     bottom: 0;
   }
 }
+
+.fixed-bg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-shadow: 1px 1px o rgba(0, 0, 0, 0.35);
+}
+
+.fixed-bg .top-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  background: #1b242b;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 199, 238, 0.25)), to(rgba(0, 0, 0, 0.51)));
+  background: linear-gradient(180deg, rgba(0, 199, 238, 0.25) 0%, rgba(0, 0, 0, 0.51) 100%);
+}
+
+.fixed-bg h3 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.products-card {
+  background: -webkit-gradient(linear, left top, left bottom, from(#eaf4fa), to(white));
+  background: linear-gradient(180deg, #eaf4fa 0%, white 100%);
+  border: 1px solid #0096DA;
+  -webkit-box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid #eef8ff;
+  line-height: 1.5;
+}
+
+.products-card h4 {
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.products-card a {
+  background-color: #FFAA1C;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.products-card a:hover {
+  color: #fff;
+  background-color: #fc9e00;
+}
 /*# sourceMappingURL=main.css.map */
