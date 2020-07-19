@@ -52,7 +52,7 @@ header a.nav-link {
   }
 }
 
-header a.nav-link:hover {
+header a.nav-link:hover, header a.nav-link.active {
   color: #0078AF !important;
   -webkit-transition: .3s;
   transition: .3s;
@@ -494,6 +494,37 @@ ul.contact-info i {
   vertical-align: middle;
 }
 
+#gotop {
+  line-height: 50px;
+  margin: -50px 2rem 1rem 2rem;
+  text-align: right;
+}
+
+@media (max-width: 576px) {
+  #gotop {
+    text-align: center;
+  }
+}
+
+#gotop i {
+  color: #0096DA;
+  background-color: #EEF8FF;
+  cursor: pointer;
+  line-height: 50px;
+  width: 50px;
+  font-size: 1.5rem;
+  border: 1px solid #5bccff;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#gotop i:hover {
+  color: #0084c1;
+  background-color: #d5eeff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 footer {
   color: #fff;
   text-align: center;
@@ -562,6 +593,11 @@ footer {
   padding: .5rem 5rem;
   margin: auto;
   display: block;
+}
+
+.contact-page form button:hover {
+  color: #fff;
+  background-color: #007ab1;
 }
 
 @media (min-width: 1500px) {

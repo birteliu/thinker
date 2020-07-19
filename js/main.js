@@ -55,3 +55,12 @@ if (
 AOS.init({
     easing: 'ease-in-out-sine'
 });
+
+//GO TOP
+$(function () {
+    $('#gotop').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#about-section').offset().top - 120
+        })
+    });
+});
