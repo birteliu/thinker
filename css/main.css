@@ -98,8 +98,8 @@ h2.section-title span {
   font-size: 0.9em;
   font-weight: normal;
   position: absolute;
-  right: 15%;
-  bottom: -23%;
+  right: 10%;
+  bottom: -15%;
   opacity: 0;
   z-index: 9;
   -webkit-transition: 0.5s;
@@ -112,12 +112,6 @@ h2.section-title span {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-}
-
-@media (min-width: 1500px) {
-  .about h6.scroll {
-    bottom: -18%;
-  }
 }
 
 .about h6.scroll:after {
@@ -139,25 +133,50 @@ h2.section-title span {
 
 @-webkit-keyframes scrolldown {
   0% {
-    bottom: -18%;
+    bottom: -12%;
   }
   50% {
-    bottom: -23%;
+    bottom: -6%;
   }
   100% {
-    bottom: -18%;
+    bottom: -12%;
   }
 }
 
 @keyframes scrolldown {
   0% {
-    bottom: -18%;
+    bottom: -12%;
   }
   50% {
-    bottom: -23%;
+    bottom: -6%;
   }
   100% {
-    bottom: -18%;
+    bottom: -12%;
+  }
+}
+
+@media (max-width: 576px) {
+  @-webkit-keyframes scrolldown {
+    0% {
+      bottom: -18%;
+    }
+    50% {
+      bottom: -23%;
+    }
+    100% {
+      bottom: -18%;
+    }
+  }
+  @keyframes scrolldown {
+    0% {
+      bottom: -18%;
+    }
+    50% {
+      bottom: -23%;
+    }
+    100% {
+      bottom: -18%;
+    }
   }
 }
 
@@ -532,6 +551,10 @@ footer {
   background: linear-gradient(90deg, #0098e3 0%, #7fd6fb 100%);
 }
 
+.contact-page {
+  min-height: calc(100vh - 3rem);
+}
+
 .contact-page .contact-logo {
   cursor: pointer;
   display: block;
@@ -600,13 +623,6 @@ footer {
   background-color: #007ab1;
 }
 
-@media (min-width: 1500px) {
-  .contact-footer {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
 .fixed-bg {
   position: relative;
   background-repeat: no-repeat;
@@ -627,6 +643,10 @@ footer {
   background: #1b242b;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 199, 238, 0.25)), to(rgba(0, 0, 0, 0.51)));
   background: linear-gradient(180deg, rgba(0, 199, 238, 0.25) 0%, rgba(0, 0, 0, 0.51) 100%);
+}
+
+.fixed-bg .fixed-height {
+  padding: 5rem 0;
 }
 
 .fixed-bg h3 {

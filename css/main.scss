@@ -96,8 +96,8 @@ h2.section-title {
         font-size: 0.9em;
         font-weight: normal;
         position: absolute;
-        right: 15%;
-        bottom: -23%;
+        right: 10%;
+        bottom: -15%;
         opacity: 0;
         z-index: 9;
         transition: 0.5s;
@@ -105,9 +105,6 @@ h2.section-title {
         animation-duration:2s;
         animation-iteration-count:infinite;
         animation-timing-function: linear;
-        @media (min-width: 1500px) { 
-            bottom: -18%;        
-        }
         &:after {
             content: "";
             display: block;
@@ -126,15 +123,28 @@ h2.section-title {
 }
 @keyframes scrolldown{
     0%{
-        bottom:-18%;
+        bottom:-12%;   
     }
     50%{
-        bottom:-23%;
+        bottom:-6%;
     }
     100%{
-        bottom:-18%;
+        bottom:-12%;    
     }
 }
+@media (max-width: 576px) {
+    @keyframes scrolldown{
+        0%{
+            bottom:-18%;   
+        }
+        50%{
+            bottom:-23%;
+        }
+        100%{
+            bottom:-18%;    
+        }
+    }
+} 
 .middle-section {
     background:linear-gradient(180deg,rgba(238,248,255,1) 0%,rgba(255,255,255,0) 100%);
     position: relative;
@@ -407,6 +417,7 @@ footer {
 
 //contact.html
 .contact-page {
+    min-height: calc(100vh - 3rem);
     .contact-logo {
         cursor: pointer;
         display: block;
@@ -460,12 +471,6 @@ footer {
         }
     }
 }
-.contact-footer {
-    @media (min-width: 1500px) { 
-        position: absolute;
-        bottom: 0;
-    }
-}
 
 //products.html
 .fixed-bg {
@@ -486,6 +491,9 @@ footer {
         opacity: 0.5;
         background: #1b242b;
         background: linear-gradient(180deg,rgba(0,199,238,0.25) 0%,rgba(0,0,0,0.51) 100%);
+    }
+    .fixed-height {
+        padding: 5rem 0;
     }
     h3 {
         font-weight: bold;
